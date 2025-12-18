@@ -1,0 +1,35 @@
+<resources>
+    <string name="battery_label">Battery: </string>
+    <string name="start_timer">Start Timer</string>
+    <string name="timer_hint">Duration</string>
+    <string name="brightness_label">Brightness</string>
+    <string name="start_battery">Battery at Start: --</string>
+    <string name="end_battery">Battery at End: --</string>
+    <string name="timer_status_default">Timer: Stopped</string>
+    <string name="duration_label">Duration</string>
+
+    <string name="eula_title">End User License Agreement</string>
+    <string name="eula_accept">Accept</string>
+    <string name="eula_decline">Decline</string>
+    <string name="eula_text">
+        <b>Mobile App End User License Agreement</b>\n\n
+        <b>BatteryLab Terms of Service</b>\n\n
+        <b>1. Acceptance of Terms</b>\n
+        By clicking \"I Agree\" or by accessing or using BatteryLab (\"the App\"), you agree to be bound by this Agreement. If you do not agree, do not use the App.\n\n
+        <b>2. Open Source Notice</b>\n
+        This App is an Open Source project. The source code is available under the Apache 2.0 license. While this Agreement governs your use of the compiled application provided here, nothing in this Agreement limits your rights to access, modify, or redistribute the source code as permitted by the Open Source license.\n\n
+        <b>3. Usage Rules</b>\n
+        You agree that you will not:\n
+        - Use the App for any illegal or unauthorized purpose.\n
+        - Attempt to disrupt or overload the App\'s infrastructure.\n
+        - Use the App to harm, harass, or defame others.\n\n
+        <b>4. No Warranty (Disclaimer)</b>\n
+        THE APP IS PROVIDED \"AS IS,\" WITHOUT WARRANTY OF ANY KIND. TO THE EXTENT PERMITTED BY LAW, THE DEVELOPER DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.\n\n
+        <b>5. Limitation of Liability</b>\n
+        UNDER NO CIRCUMSTANCES SHALL THE DEVELOPER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OF THE APP, INCLUDING DATA LOSS, DEVICE MALFUNCTION, OR SECURITY BREACHES.\n\n
+        <b>6. Privacy Policy</b>\n
+        By using this App, you acknowledge that you have reviewed our [Privacy Policy] (insert link) and understand how your data is handled.\n\n
+        <b>7. Termination</b>\n
+        We reserve the right to modify or discontinue the App at any time, with or without notice.\n
+    </string>
+</resources>

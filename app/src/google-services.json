@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "989461938808",
+    "project_id": "batterylab2025",
+    "storage_bucket": "batterylab2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989461938808:android:7a63ba122261551a1ce38d",
+        "android_client_info": {
+          "package_name": "com.example.batterylab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo-k2xYRw9EItaYD_vhXhaEBl8N29VU28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
