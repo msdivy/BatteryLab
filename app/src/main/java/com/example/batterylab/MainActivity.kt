@@ -14,7 +14,6 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Environment
 import android.provider.MediaStore
-import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
@@ -22,8 +21,6 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.io.File
-import java.io.FileOutputStream
 import java.io.OutputStream
 import java.util.Date
 
@@ -121,7 +118,7 @@ class MainActivity : AppCompatActivity() {
         val durationSeconds = durationString.toLongOrNull() ?: 0L
 
         if (durationSeconds <= 0) {
-            tvTimerStatus.text = "Please enter valid duration"
+            tvTimerStatus.text = getString(R.string.invalid_duration)
             return
         }
 
@@ -130,9 +127,9 @@ class MainActivity : AppCompatActivity() {
         btnStartTimer.isEnabled = false
         btnClose.isEnabled = false
 
-        tvTimerStatus.text = "Timer Started"
+        tvTimerStatus.text = getString(R.string.timer_started)
 
-        tvStartBattery.text = "Battery at Start: $currentBatteryLevel%"
+        tvStartBattery.text = getString(R.string.start_battery_value, currentBatteryLevel)
         tvEndBattery.text = getString(R.string.end_battery)
 
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
@@ -142,19 +139,18 @@ class MainActivity : AppCompatActivity() {
         countDownTimer = object : CountDownTimer(durationMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsRemaining = millisUntilFinished / 1000
-                tvTimerStatus.text = "Time Remaining: ${secondsRemaining}s"
+                tvTimerStatus.text = getString(R.string.time_remaining, secondsRemaining)
             }
 
             override fun onFinish() {
-                tvTimerStatus.text = "Timer Finished"
-                tvEndBattery.text = "Battery at End: $currentBatteryLevel%"
+                tvTimerStatus.text = getString(R.string.timer_finished)
+                tvEndBattery.text = getString(R.string.end_battery_value, currentBatteryLevel)
                 window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
                 btnClose.isEnabled = true
                 sbBrightness.isEnabled = true
-                //etDuration.isEnabled = true
-                //btnStartTimer.isEnabled = true
-
+                etDuration.isEnabled = true
+                btnStartTimer.isEnabled = true
             }
         }.start()
     }
@@ -169,7 +165,6 @@ class MainActivity : AppCompatActivity() {
         rootView.draw(canvas)
 
         var fos: OutputStream? = null
-        var imageUri: Uri? = null
 
         try {
             val resolver = contentResolver
@@ -181,7 +176,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            imageUri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
+            val imageUri: Uri? = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues)
             fos = imageUri?.let { resolver.openOutputStream(it) }
 
             if (fos != null) {

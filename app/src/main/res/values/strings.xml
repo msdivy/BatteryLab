@@ -8,6 +8,13 @@
     <string name="timer_status_default">Timer: Stopped</string>
     <string name="duration_label">Duration</string>
 
+    <string name="timer_started">Timer Started</string>
+    <string name="timer_finished">Timer Finished</string>
+    <string name="invalid_duration">Please enter a valid duration</string>
+    <string name="time_remaining">Time Remaining: %1$ss</string>
+    <string name="start_battery_value">Battery at Start: %1$d%%</string>
+    <string name="end_battery_value">Battery at End: %1$d%%</string>
+
     <string name="eula_title">End User License Agreement</string>
     <string name="eula_accept">Accept</string>
     <string name="eula_decline">Decline</string>
