@@ -13,7 +13,7 @@ This app is designed for automated testing (Firebase Test Lab). It allows settin
 
 ## Automated Testing
 - **Package**: `com.example.batterylab`
-- **Activity**: `.MainActivity`
+- **Launcher Activity**: `.SplashActivity` (routes to `.EulaActivity` or `.MainActivity`)
 - **UI Elements**:
     - `etDuration`: Input for timer seconds.
     - `btnStartTimer`: Button to start.
